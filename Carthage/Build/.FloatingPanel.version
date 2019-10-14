@@ -1,0 +1,10 @@
+{
+  "commitish" : "v1.6.4",
+  "iOS" : [
+    {
+      "name" : "FloatingPanel",
+      "hash" : "197f4739ae4cf34fea939d5a41eb759c5b678832ec8c5d3df182ff77a8f94922",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}
