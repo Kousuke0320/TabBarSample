@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36508E142354B42D009270FA /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36508E132354B42D009270FA /* SearchViewController.storyboard */; };
-		36508E162354B43D009270FA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36508E152354B43D009270FA /* SearchViewController.swift */; };
 		36508E182354B53C009270FA /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36508E172354B53C009270FA /* SearchViewModel.swift */; };
 		3663D02E23535C1C0078D02C /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3663D02D23535C1C0078D02C /* FloatingPanel.framework */; };
 		3663D02F23535C1C0078D02C /* FloatingPanel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3663D02D23535C1C0078D02C /* FloatingPanel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -39,6 +37,8 @@
 		36D93253235364740055D20C /* ConnectToApiGurunavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D93252235364740055D20C /* ConnectToApiGurunavi.swift */; };
 		36D9325623536A6D0055D20C /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9325523536A6D0055D20C /* SpotDetailViewController.swift */; };
 		36D9325823536A7B0055D20C /* SpotDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D9325723536A7B0055D20C /* SpotDetailViewController.storyboard */; };
+		36E1139F238AA47800F1D5AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E1139E238AA47800F1D5AA /* SearchViewController.swift */; };
+		36E113A1238AB75F00F1D5AA /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E113A0238AB75F00F1D5AA /* PickerTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		36508E132354B42D009270FA /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
-		36508E152354B43D009270FA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		36508E172354B53C009270FA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3663D02D23535C1C0078D02C /* FloatingPanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FloatingPanel.framework; path = Carthage/Build/iOS/FloatingPanel.framework; sourceTree = "<group>"; };
 		3663D03123535C2C0078D02C /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
@@ -110,6 +108,8 @@
 		36D93252235364740055D20C /* ConnectToApiGurunavi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectToApiGurunavi.swift; sourceTree = "<group>"; };
 		36D9325523536A6D0055D20C /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 		36D9325723536A7B0055D20C /* SpotDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpotDetailViewController.storyboard; sourceTree = "<group>"; };
+		36E1139E238AA47800F1D5AA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		36E113A0238AB75F00F1D5AA /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +162,9 @@
 				36B0B404235305E7002977DC /* SecondViewController.swift */,
 				36B0B402235305E7002977DC /* FirstViewController.swift */,
 				36D9324023535F010055D20C /* FirstViewModel.swift */,
-				36508E132354B42D009270FA /* SearchViewController.storyboard */,
-				36508E152354B43D009270FA /* SearchViewController.swift */,
 				36508E172354B53C009270FA /* SearchViewModel.swift */,
+				36E1139E238AA47800F1D5AA /* SearchViewController.swift */,
+				36E113A0238AB75F00F1D5AA /* PickerTextField.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -379,7 +379,6 @@
 				36B0B408235305E7002977DC /* Main.storyboard in Resources */,
 				36D9325823536A7B0055D20C /* SpotDetailViewController.storyboard in Resources */,
 				36D932492353607D0055D20C /* SpotCell.xib in Resources */,
-				36508E142354B42D009270FA /* SearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,9 +411,10 @@
 				36B0B3FF235305E7002977DC /* AppDelegate.swift in Sources */,
 				36D9324C235363220055D20C /* Article.swift in Sources */,
 				36D932482353607D0055D20C /* SpotCell.swift in Sources */,
+				36E1139F238AA47800F1D5AA /* SearchViewController.swift in Sources */,
 				36508E182354B53C009270FA /* SearchViewModel.swift in Sources */,
-				36508E162354B43D009270FA /* SearchViewController.swift in Sources */,
 				36D93244235360040055D20C /* ModalViewController.swift in Sources */,
+				36E113A1238AB75F00F1D5AA /* PickerTextField.swift in Sources */,
 				36D9325623536A6D0055D20C /* SpotDetailViewController.swift in Sources */,
 				36B0B401235305E7002977DC /* SceneDelegate.swift in Sources */,
 				36D93250235363570055D20C /* Image.swift in Sources */,

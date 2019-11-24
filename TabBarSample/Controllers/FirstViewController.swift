@@ -96,7 +96,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
 extension FirstViewController: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let viewController = SearchViewController.initialiseController()!
+        let viewController = SearchViewController()
         let navigationView = UINavigationController(rootViewController: viewController)
         self.navigationController?.pushViewController(viewController, animated: true)
     }

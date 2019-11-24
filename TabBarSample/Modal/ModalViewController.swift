@@ -19,13 +19,10 @@ class ModalContentViewController: UIViewController {
     var tableview: UITableView?
     var lat: Double?
     var lon: Double?
+    let connectATabelog = ConnectToApiGurunavi()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let connectATabelog = ConnectToApiGurunavi()
-        
         
         let viewFrame = UIScreen.main.bounds
         let viewLabelSize = CGSize(width: viewFrame.width, height: viewFrame.height - 60)
@@ -50,7 +47,7 @@ class ModalContentViewController: UIViewController {
         //        })
         
         self.tableview?.delegate = self
-        self.tableview!.dataSource = self
+        self.tableview?.dataSource = self
         
         connectATabelog.fetchArticle(lat: self.lat, lon: self.lon, completion: { (articles) in
             guard let articleValue = articles else {
@@ -75,8 +72,6 @@ extension ModalContentViewController: UITableViewDelegate, UITableViewDataSource
     
     //cellをセットする
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //       let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "SpotCell") as! SpotCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpotCell") as! SpotCell
         let article = articles
         let rest = article.results?.shop?[indexPath.row]
