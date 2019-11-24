@@ -22,10 +22,10 @@ struct results: Codable {
 }
 
 extension results {
-    init(_ json: [String: Any]) {
-        if let shop = json["shop"] as? [Shop] {
-            self.shop = shop
-        }
-    }
+//    init(_ json: [String: Any]) {
+//        if let shop = json["shop"] as? [Shop] {
+//            self.shop = shop
+//        }
+//    }
 }
 

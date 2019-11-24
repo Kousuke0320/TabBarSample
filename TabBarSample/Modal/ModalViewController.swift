@@ -70,10 +70,7 @@ extension ModalContentViewController {
         guard let stringUrl = rest?.photo?.mobile?.l, !stringUrl.isEmpty else {
             return cell
         }
-        
-        print("緯度情報\(rest?.lat)")
-        print("経度情報\(rest?.lng)")
-        
+
         let url = URL(string: stringUrl)
         do {
             let data = try Data(contentsOf: url!)
@@ -84,7 +81,7 @@ extension ModalContentViewController {
         }catch let err {
             print("Error : \(err.localizedDescription)")
         }
-        
+
         return cell
     }
     

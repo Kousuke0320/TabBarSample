@@ -12,8 +12,8 @@ struct Shop: Codable {
     var name: String?
     var address: String?
     var photo: Images?
-    var lat: Double?
-    var lng: Double?
+    var lat: String?
+    var lng: String?
 }
 
 extension Shop {
@@ -24,15 +24,15 @@ extension Shop {
         if let address = json["address"] as? String {
             self.address = address
         }
-        if let photo = json["photo"] as? Images {
-            self.photo = photo
-        }
-        if let lat = json["lat"] as? Double {
-            self.lat = lat
-        }
-        if let lng = json["lng"] as? Double {
-            self.lng = lng
-        }
+//        if let photo = json["photo"] as? Images {
+//            self.photo = photo
+//        }
+//        if let lat = json["lat"] as? Double {
+//            self.lat = lat
+//        }
+//        if let lng = json["lng"] as? Double {
+//            self.lng = lng
+//        }
     }
 }
 
