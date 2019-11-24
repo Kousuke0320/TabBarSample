@@ -20,7 +20,7 @@ final class FirstViewModel {
         modalViewController.lat = lat
         modalViewController.lon = lon
         floatingPanelController.set(contentViewController: modalViewController)
-        floatingPanelController.track(scrollView: modalViewController.tableView)
+        //floatingPanelController.track(scrollView: modalViewController.tableView)
         floatingPanelController.addPanel(toParent: viewController, belowView: nil, animated: false)
     }
 }
