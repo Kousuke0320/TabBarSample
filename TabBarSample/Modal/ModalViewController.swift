@@ -62,17 +62,17 @@ extension ModalContentViewController {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "SpotCell") as! SpotCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpotCell") as! SpotCell
         let article = articles
-        let rest = article.rest?[indexPath.row]
+        let rest = article.results?.shop?[indexPath.row]
         //cell.textLabel?.text = rest?.name
 //        cell.label.text = rest?.name
         cell.label.text = rest?.name
         
-        guard let stringUrl = rest?.image_url?.shop_image1, !stringUrl.isEmpty else {
+        guard let stringUrl = rest?.photo?.mobile?.l, !stringUrl.isEmpty else {
             return cell
         }
         
         print("緯度情報\(rest?.lat)")
-        print("経度情報\(rest?.lon)")
+        print("経度情報\(rest?.lng)")
         
         let url = URL(string: stringUrl)
         do {
@@ -90,7 +90,7 @@ extension ModalContentViewController {
     
     //cellの数をセットする
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.rest?.count ?? 0
+        return articles.results?.shop?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

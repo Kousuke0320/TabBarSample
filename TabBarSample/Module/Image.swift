@@ -8,19 +8,34 @@
 
 import Foundation
 
+struct Images: Codable {
+    var mobile: Image?
+}
+
+extension Images {
+    init(_ json: [String: Any]) {
+        if let mobile = json["mobile"] as? Image {
+            self.mobile = mobile
+        }
+    }
+}
+
 struct Image: Codable {
-    var shop_image1: String?
-    var shop_image2: String?
+    var s: String?
+    var m: String?
+    var l: String?
 }
 
 extension Image {
     init(_ json: [String: Any]) {
-        
-        if let shop_image1 = json["shop_image1"] as? String {
-            self.shop_image1 = shop_image1
+        if let shop_image1 = json["s"] as? String {
+            self.s = shop_image1
         }
-        if let shop_image2 = json["shop_image2"] as? String {
-            self.shop_image2 = shop_image2
+        if let shop_image2 = json["m"] as? String {
+            self.m = shop_image2
+        }
+        if let shop_image2 = json["l"] as? String {
+            self.l = shop_image2
         }
     }
 }

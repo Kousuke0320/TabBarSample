@@ -9,17 +9,22 @@
 import Foundation
 
 struct Article: Codable {
+    
+    var results: results?
     //初期化をしないと表示されない
     init() {
         
     }
-    var rest: [Rest]?
 }
 
-extension Article {
+struct results: Codable {
+    var shop: [Shop]?
+}
+
+extension results {
     init(_ json: [String: Any]) {
-        if let article = json["rest"] as? [Rest] {
-            self.rest = article
+        if let shop = json["shop"] as? [Shop] {
+            self.shop = shop
         }
     }
 }

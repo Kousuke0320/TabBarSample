@@ -9,7 +9,7 @@
 import Foundation
 
 class ConnectToApiGurunavi {
-    let url =  "https://api.gnavi.co.jp/RestSearchAPI/v3/"
+    let url =  "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
     
     func fetchArticle(name: String?, completion: @escaping (Article?) -> Swift.Void) {
         
@@ -22,9 +22,9 @@ class ConnectToApiGurunavi {
         }
         
         urlComponents.queryItems = [
-            URLQueryItem(name: "keyid", value: "68d888e65ff9a737216fd6d084c28179"),
-            URLQueryItem(name: "name", value: name),
-            //URLQueryItem(name: "freeword", value: "カフェ")
+            URLQueryItem(name: "key", value: "b68ec133adc2d82e"),
+            URLQueryItem(name: "format", value: "json"),
+            URLQueryItem(name: "name", value: name)
         ]
         
         let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in
@@ -58,9 +58,10 @@ class ConnectToApiGurunavi {
         }
         
         urlComponents.queryItems = [
-            URLQueryItem(name: "keyid", value: "68d888e65ff9a737216fd6d084c28179"),
-            URLQueryItem(name: "latitude", value: String("\(lat)")),
-            URLQueryItem(name: "longitude", value: String("\(lon)"))
+            URLQueryItem(name: "key", value: "b68ec133adc2d82e"),
+            URLQueryItem(name: "lat", value: String("\(lat)")),
+            URLQueryItem(name: "lng", value: String("\(lon)")),
+            URLQueryItem(name: "format", value: "json")
         ]
         
         let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in

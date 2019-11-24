@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct Rest: Codable {
+struct Shop: Codable {
     var name: String?
     var address: String?
-    var image_url: Image?
+    var photo: Images?
     var lat: Double?
-    var lon: Double?
+    var lng: Double?
 }
 
-extension Rest {
+extension Shop {
     init(_ json: [String: Any]) {
         if let name = json["name"] as? String {
             self.name = name
@@ -24,14 +24,14 @@ extension Rest {
         if let address = json["address"] as? String {
             self.address = address
         }
-        if let image_url = json["image_url"] as? Image {
-            self.image_url = image_url
+        if let photo = json["photo"] as? Images {
+            self.photo = photo
         }
-        if let lat = json["latitude"] as? Double {
+        if let lat = json["lat"] as? Double {
             self.lat = lat
         }
-        if let lon = json["longitude"] as? Double {
-            self.lon = lon
+        if let lng = json["lng"] as? Double {
+            self.lng = lng
         }
     }
 }
